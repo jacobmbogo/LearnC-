@@ -311,54 +311,59 @@ void arrayVectorInit()
 }
 
 //* multidimensional arrays
-void mulitdimensionalArrays()
+// void mulitdimensionalArrays()
+// {
+//     int ia[3][4]; //* Array of size 3; each element is an array of ints of size 4
+//     //* array of size 10; each elment is a 20-element array whose elements are arrays of 30 ints
+//     int arr[10][20][30] = {0};
+
+//     int arr2[10] = {0};
+//     std::cout << arr2[6];
+//     std::cout << std::endl;
+
+//     //*Initializing elements of a multidimensional array
+//     int ja[3][4] = {
+//         {0, 1, 2, 3},
+//         {4, 5, 6, 7},
+//         {8, 9, 10, 11}};
+
+//     int ia2[3][4] = {
+//         0,
+//         1,
+//         2,
+//         3,
+//         4,
+//         5,
+//         6,
+//         7,
+//         8,
+//         9,
+//         10,
+//         11};
+
+//     std::cout << ja[2][1] << std::endl;
+
+//     //*subscripting a multidimensional array
+//     ia[2][3] = arr[0][0][0];
+
+//     constexpr size_t rowCnt = 3, colCnt = 4;
+//     int ia[rowCnt][colCnt]; // 12 uninitialized elements
+//     // for each row
+//     for (size_t i = 0; i != rowCnt; ++i)
+//     {
+//         for (size_t j = 0; j != colCnt; ++j)
+//         {
+//             ia[i][j] = i * colCnt + j;
+//         }
+//     }
+// }
+
+void testGithub()
 {
-    int ia[3][4]; //* Array of size 3; each element is an array of ints of size 4
-    //* array of size 10; each elment is a 20-element array whose elements are arrays of 30 ints
-    int arr[10][20][30] = {0};
-
-    int arr2[10] = {0};
-    std::cout << arr2[6];
-    std::cout << std::endl;
-
-    //*Initializing elements of a multidimensional array
-    int ja[3][4] = {
-        {0, 1, 2, 3},
-        {4, 5, 6, 7},
-        {8, 9, 10, 11}};
-
-    int ia2[3][4] = {
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11};
-
-    std::cout << ja[2][1] << std::endl;
-
-    //*subscripting a multidimensional array
-    ia[2][3] = arr[0][0][0];
-
-    constexpr size_t rowCnt = 3, colCnt = 4;
-    int ia[rowCnt][colCnt]; // 12 uninitialized elements
-    // for each row
-    for (size_t i = 0; i != rowCnt; ++i)
-    {
-        for (size_t j = 0; j != colCnt; ++j)
-        {
-            ia[i][j] = i * colCnt + j;
-        }
-    }
+    std::cout << "This is Github" << std::endl;
 }
 
 int main()
 {
-    mulitdimensionalArrays();
+    testGithub();
 };
