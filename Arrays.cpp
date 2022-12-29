@@ -428,7 +428,54 @@ void swithcStatement()
               << "Number of vowel u: \t" << uCnt << std::endl;
 }
 
+void ifStatement()
+{
+    int aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0, otherVowels = 0, spaceTabs = 0;
+    char ch;
+    while (std::cin >> ch)
+    {
+        if (ch == 'a' || ch == 'A')
+        {
+            ++aCnt;
+        }
+        else if (ch == 'e' || ch == 'E')
+        {
+            ++eCnt;
+        }
+        else if (ch == 'i' || ch == 'I')
+        {
+            ++iCnt;
+        }
+        else if (ch == 'o' || ch == 'O')
+        {
+            ++oCnt;
+        }
+        else if (ch == 'u' || ch == 'U')
+        {
+            ++uCnt;
+        }
+        else if (isspace(ch))
+
+        {
+            ++spaceTabs;
+        }
+        else
+        {
+            ++otherVowels;
+        }
+    }
+
+    std::cout << "Number of vowel a: \t" << aCnt << '\n'
+              << "Number of vowel e: \t" << eCnt << '\n'
+              << "Number of vowel i: \t" << iCnt << '\n'
+              << "Number of vowel o: \t" << oCnt << '\n'
+              << "Number of vowel u: \t" << uCnt << '\n'
+              << "Number of other vowels : \t" << otherVowels << std::endl;
+
+    std::cout << "Number of spaceTabs:  \t" << spaceTabs << std::endl;
+}
+
 int main()
 {
-    swithcStatement();
+    ifStatement();
 }
