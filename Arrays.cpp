@@ -302,7 +302,7 @@ void cchar()
 
 void arrayVectorInit()
 {
-    int int_arr[] = {0, 1, 2, 3, 4, 5};
+    int int_arr[] = {0, 1, 66, 3, 4, 5};
     std::vector<int> ivec(std::begin(int_arr), std::end(int_arr));
     for (auto &c : ivec)
         std::cout << c << "";
@@ -363,7 +363,72 @@ void testGithub()
     std::cout << "This is Github" << std::endl;
 }
 
+void arrayTest()
+{
+    constexpr size_t rowCnt = 3, colCnt = 4;
+    int ia[rowCnt][colCnt];
+    for (size_t i = 0; i != rowCnt; ++i)
+    {
+        for (size_t j = 0; j != colCnt; ++j)
+        {
+            ia[i][j] = i * colCnt + j;
+        }
+    }
+}
+void siever()
+//{} pointers and multidimensional arrays
+{
+    std::vector<int> ivec;
+    int number;
+
+    while (std::cin >> number && number != 0)
+    {
+        ivec.push_back(number);
+    }
+    for (auto i = ivec.begin(); i != ivec.end(); ++i)
+    {
+        std::cout << *i << std::endl;
+    }
+}
+
+void swithcStatement()
+{
+    unsigned aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0;
+    char ch;
+
+    while (std::cin >> ch)
+    {
+        switch (ch)
+        {
+        case 'a':
+            ++aCnt;
+            break;
+
+        case 'e':
+            ++eCnt;
+            break;
+
+        case 'i':
+            ++iCnt;
+            break;
+
+        case 'o':
+            ++oCnt;
+            break;
+
+        case 'u':
+            ++uCnt;
+            break;
+        }
+    }
+    std::cout << "Number of vowel a: \t" << aCnt << '\n'
+              << "Number of vowel e: \t" << eCnt << '\n'
+              << "Number of vowel i: \t" << iCnt << '\n'
+              << "Number of vowel o: \t" << oCnt << '\n'
+              << "Number of vowel u: \t" << uCnt << std::endl;
+}
+
 int main()
 {
-    testGithub();
-};
+    swithcStatement();
+}
