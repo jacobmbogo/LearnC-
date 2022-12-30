@@ -474,7 +474,7 @@ void ifStatement()
     std::cout << "Number of spaceTabs:  \t" << spaceTabs << std::endl;
 }
 
-void someProgramme()
+void wordDuplicateCount()
 {
     std::string word;
     std::string duplicateWord;
@@ -511,5 +511,5 @@ void someProgramme()
 
 int main()
 {
-    someProgramme();
+    wordDuplicateCount();
 }
