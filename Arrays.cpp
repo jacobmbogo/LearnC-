@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <array>
 #include <cstring>
 
 //*Array is a data structure that is similar to the library <vector> but offers a different trade-off between performance
@@ -475,7 +474,42 @@ void ifStatement()
     std::cout << "Number of spaceTabs:  \t" << spaceTabs << std::endl;
 }
 
+void someProgramme()
+{
+    std::string word;
+    std::string duplicateWord;
+    unsigned int cnt = 0, maxCnt = 0;
+    std::string maxWord;
+
+    while (std::cin >> word)
+    {
+        if (word == duplicateWord)
+        {
+            cnt++;
+            duplicateWord = word;
+            if (cnt > maxCnt)
+            {
+                maxCnt = cnt;
+                maxWord = duplicateWord;
+            }
+        }
+        else
+        {
+            cnt = 1;
+            duplicateWord = word;
+        }
+    }
+    if (maxCnt <= 1)
+    {
+        std::cout << "There are no immediate duplicates" << std::endl;
+    }
+    else
+    {
+        std::cout << "The duplicated word is: " << maxWord << " and it is repeated " << maxCnt << " times " << std::endl;
+    }
+}
+
 int main()
 {
-    ifStatement();
+    someProgramme();
 }
